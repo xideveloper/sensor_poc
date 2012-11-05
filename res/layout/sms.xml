@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/shake_me_text"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:text="@string/shake_me_out"
+        android:textStyle="bold"
+        android:textSize="36dp"
+        android:textColor="#860886"
+        />
+    
+    
+    <ScrollView
+    android:id="@+id/sms_scrollview"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scrollbarStyle="insideOverlay"
+    android:scrollbars="vertical"
+     >
+
+    
+	
+	
+	
+	 <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/smss" >
+         
+	     
+	 </LinearLayout>
+	
+</ScrollView>
+    
+    
+ 
+	
+</LinearLayout>

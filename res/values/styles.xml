@@ -1,0 +1,41 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+
+    <style name="FontStyle">
+        <item name="android:textColor">#ffffff</item>
+        <item  name="android:textSize">15dp</item>
+        <item name="android:textColorLink">#91D700</item>
+    </style>
+    
+     <style name="FontStyle.big">
+        <item name="android:textSize">19dp</item>    
+    </style>
+    
+     <style name="FontStyle.big.bold">
+        <item name="android:textStyle">bold</item>    
+    </style>
+    
+    <style name="FontStyle.middle">
+        <item name="android:textSize">18dp</item>
+    </style>
+    	
+     <style name="myBaseBtn">
+        <item name="android:gravity">center</item>
+    	<item name="android:layout_gravity">center</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">#ffffff</item> 
+    </style>
+    
+    <style name="myBtn" parent="@style/myBaseBtn">
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">70dp</item>     
+    </style>
+    
+    <style name="FontStyle.middle.bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    
+</resources>

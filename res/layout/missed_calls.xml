@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+<ScrollView
+    android:id="@+id/phonebook_scrollview"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scrollbarStyle="insideOverlay"
+    android:scrollbars="vertical"
+     >
+
+    <!--  
+    <TextView
+        android:id="@+id/proximityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call me"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        />
+    
+    <TextView
+        android:id="@+id/counter_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:text="045 358 4099"
+        />
+	-->
+	
+	
+	
+	 <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/missed_calls" >
+        
+	   <TextView 
+	         android:id="@+id/nr_of_missed_calls"
+	         android:layout_width="fill_parent"
+	         android:layout_height="45dp"
+	         style="@style/FontStyle.big.bold"
+	         android:background="#050205"
+	         android:layout_marginTop="0dp"
+	         android:layout_marginBottom="0dp"
+	         android:gravity="center_vertical"
+	         android:layout_gravity="center_vertical"
+	         android:paddingLeft="10dp"
+	         android:paddingRight="10dp"/>
+	     
+	     
+	 </LinearLayout>
+	
+</ScrollView>
+
+<RelativeLayout 
+    android:id="@+id/selected_caller"
+    android:background="#160516"
+    android:layout_width="fill_parent"
+    android:layout_height="70dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:layout_gravity="center_horizontal|bottom"
+   >
+	 
+    <TextView 
+	    android:id="@+id/reply_to_label"
+	    style="@style/FontStyle.big.bold"
+	   
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	     android:layout_gravity="center_vertical"
+	     android:layout_margin="10dp"
+	    android:text="@string/reply_to"/>
+    
+    <TextView 
+	    android:id="@+id/reply_to_nr"
+	    style="@style/FontStyle.big.bold"
+	    android:layout_toRightOf="@id/reply_to_label"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_horizontal"
+	    />
+    
+     <TextView 
+	    android:id="@+id/reply_to_name"
+	    style="@style/FontStyle.big.bold"
+	    android:layout_toRightOf="@id/reply_to_label"
+	    android:layout_below="@id/reply_to_nr"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_horizontal"
+	    />
+    
+    
+</RelativeLayout>
+
+
+</FrameLayout>

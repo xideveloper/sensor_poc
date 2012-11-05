@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="10dp"
+    	android:paddingRight="10dp"
+    	android:background = "@drawable/button_normal"
+>
+
+    <TextView 
+        android:id="@+id/caller_name"
+        style="@style/FontStyle.middle.bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:text="NAME"/>
+    
+    
+    <TextView 
+        android:id="@+id/call_date"
+        style="@style/FontStyle.middle.bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        
+        android:text="TUE 12.09.2012 13:44:56"/>
+    
+    
+    <TextView 
+        android:id="@+id/call_nr"
+        style="@style/FontStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/caller_name"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="034544523452"
+         />
+    
+    <TextView 
+        android:id="@+id/call_nr_type"
+        style="@style/FontStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/call_date"
+        android:layout_toRightOf="@id/call_nr"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:text="Work Mobile"
+         />
+    
+    
+</RelativeLayout>
