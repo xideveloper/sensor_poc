@@ -18,8 +18,6 @@ public class MenuActivity extends SensorActivity{
 	
 	private int timeCounter, timeCounter2;
 	
-	//private static String KEY_BUTTON_CLICK_TIME = "btn_click_time";
-	
 	@InjectView (R.id.go_back_btn) private Button goBackBtn;
 	@InjectView (R.id.missed_calls_btn) private Button missedCallsBtn;
 	@InjectView (R.id.email_btn) private Button emailBtn;
@@ -71,9 +69,9 @@ public class MenuActivity extends SensorActivity{
     	
     	float vectorX = event.values[0]; // around x-axis, point to east direction
 		
-		//the following two vectors are not used for now.
-        float vectorY = event.values[1]; // around y-axis, point to magnetic north direction
-        float vectorZ = event.values[2]; // around z-axis, ponit to sky direction 
+    	//the following two vectors are not used for now.
+    	float vectorY = event.values[1]; // around y-axis, point to magnetic north direction
+    	float vectorZ = event.values[2]; // around z-axis, ponit to sky direction 
         
         //update sensor data every second (i.e. timeInterval)
         synchronized (this) {
@@ -105,7 +103,7 @@ public class MenuActivity extends SensorActivity{
     		if(timeCounter==WAIT_TIME){
     			Log.v("*GO TO MISSED CALLS*","ok");
     			Intent i = new Intent(this, MissedCallsActivity.class);
-                startActivity(i); 
+    			startActivity(i); 
     		}
     		
     		

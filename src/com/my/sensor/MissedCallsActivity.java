@@ -49,7 +49,7 @@ public class MissedCallsActivity extends SensorActivity{
 	private long intervalMillis = 1000;
 	
 	@Override
-    public void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
 		inflater = LayoutInflater.from(this);
@@ -61,12 +61,12 @@ public class MissedCallsActivity extends SensorActivity{
 	}
 	
 	@Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy){
+	public void onAccuracyChanged(Sensor sensor, int accuracy){
     	super.onAccuracyChanged(sensor, accuracy);
     }
 	
-    @Override
-    public void onSensorChanged(SensorEvent event){
+	@Override
+	public void onSensorChanged(SensorEvent event){
     	super.onSensorChanged(event);
     	
     	
@@ -182,8 +182,8 @@ public class MissedCallsActivity extends SensorActivity{
     	getMissedCalls();
     }
 	
-     @Override
-	 protected void onResume() {
+    @Override
+    protected void onResume() {
 	    super.onResume();
 	    
 	    sensorMgr.registerListener(this, proxSensor, SensorManager.SENSOR_DELAY_NORMAL);
@@ -191,8 +191,8 @@ public class MissedCallsActivity extends SensorActivity{
 	   
 	}
 	
-    @Override
-	protected void onPause() {
+     @Override
+     protected void onPause() {
 	    super.onPause();
 	    
 	    sensorMgr.unregisterListener(this);
@@ -205,7 +205,7 @@ public class MissedCallsActivity extends SensorActivity{
     	
     }
 	
-	private void getMissedCalls(){
+    private void getMissedCalls(){
 		
 		String[] projection = { CallLog.Calls.NUMBER, CallLog.Calls.DATE, CallLog.Calls.DURATION, CallLog.Calls.TYPE, 
 								CallLog.Calls.IS_READ, CallLog.Calls.NEW, CallLog.Calls.CACHED_NAME,
@@ -306,7 +306,7 @@ public class MissedCallsActivity extends SensorActivity{
 	   
 	}
 	
-	private void populateMissedCallList(String callerName, String callDate, String callNr, String callNrType, LinearLayout container){
+    private void populateMissedCallList(String callerName, String callDate, String callNr, String callNrType, LinearLayout container){
 		RelativeLayout missedCallRow = (RelativeLayout) inflater.inflate(R.layout.missed_call_row, null);
 		TextView callerNameField = (TextView)missedCallRow.findViewById(R.id.caller_name);
 		TextView callDateField = (TextView)missedCallRow.findViewById(R.id.call_date);
@@ -321,7 +321,7 @@ public class MissedCallsActivity extends SensorActivity{
 		container.addView(missedCallRow);
 	}
 	
-	private void removeMissedCallsShowingOnScreen(){
+    private void removeMissedCallsShowingOnScreen(){
 		int nrOfChildViews = missedCallsLinearLayout.getChildCount();
 		if(nrOfChildViews>1){
 			for(int i=1; i<nrOfChildViews; i++){
