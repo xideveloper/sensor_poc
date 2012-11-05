@@ -24,11 +24,10 @@ public class MenuActivity extends SensorActivity{
 	@InjectView (R.id.sms_btn) private Button smsBtn;
 	
 	@Override
-    public void onCreate(Bundle savedInstanceState) {
-	        super.onCreate(savedInstanceState);
-	       
-	        sensorMgr = (SensorManager) getSystemService(SENSOR_SERVICE);
-	        rotatSensor = sensorMgr.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+	    sensorMgr = (SensorManager) getSystemService(SENSOR_SERVICE);
+	    rotatSensor = sensorMgr.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);
 	        
 	}
 	

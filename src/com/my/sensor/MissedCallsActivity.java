@@ -125,8 +125,7 @@ public class MissedCallsActivity extends SensorActivity{
   	  	    	    	
   	    	    	//}
   	    	    	moveCounter++;
-  	    	    	
-	  	    	    scrollView.smoothScrollBy(0, scrollDist);
+  	    	    	scrollView.smoothScrollBy(0, scrollDist);
   	    
   	    	    } 
   	    	});
@@ -190,9 +189,8 @@ public class MissedCallsActivity extends SensorActivity{
 	}
 	
      @Override
-     protected void onPause() {
-	    super.onPause();
-	    
+     protected void onPause(){
+    	super.onPause();
 	    sensorMgr.unregisterListener(this);
 	
 	}
@@ -200,7 +198,6 @@ public class MissedCallsActivity extends SensorActivity{
     @Override
     protected void onStop (){
     	super.onStop();
-    	
     }
 	
     private void getMissedCalls(){

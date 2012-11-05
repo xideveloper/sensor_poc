@@ -33,7 +33,7 @@ public class SmsActivity extends SensorActivity{
 	private Sensor accSensor;
 	
 	@Override
-    public void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
 		mInitialized = false;
@@ -55,13 +55,13 @@ public class SmsActivity extends SensorActivity{
 		sensorMgr.unregisterListener(this);
 	}
 	
-	 @Override
-	    public void onStart(){
-	    	super.onStart();
-	    	
-	    	contentView = (ViewGroup)getWindow().getDecorView();
-	    	shakeMeTxt = (TextView) contentView.findViewById(R.id.shake_me_text);
-	    	smsLinearLayout = (LinearLayout) contentView.findViewById(R.id.smss);
+	@Override
+	public void onStart(){
+    	super.onStart();
+    	
+    	contentView = (ViewGroup)getWindow().getDecorView();
+    	shakeMeTxt = (TextView) contentView.findViewById(R.id.shake_me_text);
+    	smsLinearLayout = (LinearLayout) contentView.findViewById(R.id.smss);
 	 }
 	
 	@Override
