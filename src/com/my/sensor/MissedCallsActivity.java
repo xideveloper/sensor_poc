@@ -69,37 +69,36 @@ public class MissedCallsActivity extends SensorActivity{
 	public void onSensorChanged(SensorEvent event){
     	super.onSensorChanged(event);
     	
-    	
-    		float vectorX = event.values[0]; // around x-axis, point to east direction
+    	float vectorX = event.values[0]; // around x-axis, point to east direction
     		
-    		//the following two vectors are not used for now.
-            float vectorY = event.values[1]; // around y-axis, point to magnetic north direction
-            float vectorZ = event.values[2]; // around z-axis, ponit to sky direction 
+    	//the following two vectors are not used for now.
+    	float vectorY = event.values[1]; // around y-axis, point to magnetic north direction
+    	float vectorZ = event.values[2]; // around z-axis, ponit to sky direction 
             
-            //update the result every second (i.e. intervalMillis)
-            synchronized (this) {
-            	long currentMillis = System.currentTimeMillis();
-                if (System.currentTimeMillis() > lastMillis + intervalMillis) {
-                	lastMillis = currentMillis;
-                	//Log.v("**zaimuth_angle**", String.valueOf(azimuth_angle));
-                	detectScrolling(vectorX);
-                	
-                }
+    	//update the result every second (i.e. intervalMillis)
+        synchronized (this) {
+        	long currentMillis = System.currentTimeMillis();
+            if (System.currentTimeMillis() > lastMillis + intervalMillis) {
+            	lastMillis = currentMillis;
+            	//Log.v("**zaimuth_angle**", String.valueOf(azimuth_angle));
+            	detectScrolling(vectorX);
+            	
             }
+        }
         	
-            if(event.sensor.getType() == Sensor.TYPE_PROXIMITY){
-            	Log.v("**PROX**","YES");
-            	if(event.values[0]==OBJECT_NEAR){
-                	
-                	if(selectedPhoneNr!=null && !selectedPhoneNr.equals("")){
-                		Intent callIntent = new Intent(Intent.ACTION_CALL);
-               	     	callIntent.setData(Uri.parse("tel:"+selectedPhoneNr));
-               	     	startActivity(callIntent);
-                	}
-                	
-                	
-                }
+        if(event.sensor.getType() == Sensor.TYPE_PROXIMITY){
+        	Log.v("**PROX**","YES");
+        	if(event.values[0]==OBJECT_NEAR){
+            	
+            	if(selectedPhoneNr!=null && !selectedPhoneNr.equals("")){
+            		Intent callIntent = new Intent(Intent.ACTION_CALL);
+           	     	callIntent.setData(Uri.parse("tel:"+selectedPhoneNr));
+           	     	startActivity(callIntent);
+            	}
+            	
+            	
             }
+        }
             
     	
 
@@ -109,7 +108,6 @@ public class MissedCallsActivity extends SensorActivity{
     	
     	if (vectorX <= AZIMUTH_THRESHOLD && vectorX >= -AZIMUTH_THRESHOLD) {
     		Log.v("**idle up-down pos**",String.valueOf(moveCounter));
-    		
     		
     		
     	} else if (vectorX < -AZIMUTH_THRESHOLD) {
