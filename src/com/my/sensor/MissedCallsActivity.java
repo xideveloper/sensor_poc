@@ -62,8 +62,8 @@ public class MissedCallsActivity extends SensorActivity{
 	
 	@Override
 	public void onAccuracyChanged(Sensor sensor, int accuracy){
-    	super.onAccuracyChanged(sensor, accuracy);
-    }
+		super.onAccuracyChanged(sensor, accuracy);
+	}
 	
 	@Override
 	public void onSensorChanged(SensorEvent event){
@@ -207,7 +207,7 @@ public class MissedCallsActivity extends SensorActivity{
 	
     private void getMissedCalls(){
 		
-		String[] projection = { CallLog.Calls.NUMBER, CallLog.Calls.DATE, CallLog.Calls.DURATION, CallLog.Calls.TYPE, 
+		   String[] projection = { CallLog.Calls.NUMBER, CallLog.Calls.DATE, CallLog.Calls.DURATION, CallLog.Calls.TYPE, 
 								CallLog.Calls.IS_READ, CallLog.Calls.NEW, CallLog.Calls.CACHED_NAME,
 								CallLog.Calls.CACHED_NUMBER_LABEL, CallLog.Calls.CACHED_NUMBER_TYPE};
 	       String where = CallLog.Calls.TYPE+"="+CallLog.Calls.MISSED_TYPE;   
