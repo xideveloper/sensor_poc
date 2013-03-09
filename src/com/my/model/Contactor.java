@@ -1,7 +1,7 @@
 package com.my.model;
 
 public class Contactor {
-	
+	//
 	private String name;
 	private String phoneNr;
 	private String phoneNrType;
