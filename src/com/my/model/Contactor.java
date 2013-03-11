@@ -6,7 +6,7 @@ public class Contactor {
 	private String phoneNr;
 	private String phoneNrType;
 	
-//
+//////
 	public Contactor(String name, String phoneNr, String phoneNrType){
 		this.name = name;
 		this.phoneNr = phoneNr;
